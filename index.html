@@ -10,7 +10,7 @@
 	<title>Document</title>
 	<style>
 		.nme{
-			padding:1em;
+			padding:.5em;
 			border: none;
 			border-radius: 6px;
 			background-color: rgb(226, 229, 231);
@@ -18,7 +18,49 @@
 		input[type="file"]{
 			display:none;
 		}
-		
+		input[type="text"]{
+			outline:none;
+			font-size: 20px;
+			color:rgb(116, 100, 100);
+		}
+		input[type="text"]:focus{
+			border:3px solid rgb(189, 147, 228);
+			transition: .4s;
+			
+		}
+		.logo{
+			position:relative;
+			animation-name:logo_animate;
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-out;
+		}
+		@keyframes logo_animate{
+			0% {opacity: 0;left:-250px; top:0px}
+			100% {opacity: 1;left:0px; top:0px}
+		}
+		.logo_right{
+			position: relative;
+			animation-name:logo_right_animation;
+			animation-duration: 1.5s;
+			animation-fill-mode:forwards;
+			animation-timing-function: ease-out;
+		}
+		@keyframes logo_right_animation{
+			0% {right:-250px;top:0px}
+			100% {right:0px;top:0px;}
+		}
+		.search_animation{
+			position: relative;
+			animation-name:search_bottom_animation;
+			animation-duration: 1s;
+			animation-fill-mode:forwards;
+			animation-timing-function: ease-out;
+		}
+		@keyframes search_bottom_animation{
+			0% {bottom:-250px;}
+			100% {bottom:0px;}
+		}
 	</style>
 </head>
 <body>
@@ -28,9 +70,9 @@
 			<div class="col-sm-12 " style="background-image: url('back2.jpg'); background-size:cover;background-repeat:no-repeat;">
 				<div class="row justify-content-center " style="margin-top: 100px;">
 					<div class="col-4" >
-						<img src="visit_nepal_logo.png" alt="" style="width:85%;">
+						<img src="visit_nepal_logo.png"class="logo" alt="" style="width:85%;">
 					</div>
-					<div class="col-4">
+					<div class="col-4 logo_right">
 						<h1 class="display-4 font-weight-bold  text-center" style="color:rgb(255, 255, 255);">
 
 							<span style="">Let's make our life adventurous</span><br>
@@ -39,12 +81,12 @@
 						
 						</h1>
 					</div>
-					<div class=" container border rounded-lg" style=" background:rgba(255, 255, 255, 0.3);border:none;margin:100px 0 100px 0;">
+					<div class=" container border rounded-lg search_animation" style=" background:rgba(255, 255, 255, 0.3);border:none;margin:100px 0 100px 0;">
 						<div class="container">
 							<div  style="margin:1em 50% 0 40%; ">
 								<h1 class="text-center"style="background-color: rgb(255, 255, 255); margin:0;width:5em; border-radius:6px 6px 0 0;">Search</h1>
 							</div>
-							<div class="row " style="background-color: rgb(255, 255, 255);margin-bottom:1em;">
+							<div class="row " style="background-color: rgb(255, 255, 255);margin-bottom:1em;border-radius:6px;">
 								<div class="col-12">
 
 
